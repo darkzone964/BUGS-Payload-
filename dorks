@@ -1,1 +1,15 @@
+1- CENSYS DORKS: 
 
+استعلام Censys لكشف خدمات HTTP التي تستخدم خادم Nginx وتحتوي على عنوان صفحة HTML 'Staging'"
+
+Exposed Staging Environment: 
+
+services.http.response.html_title: "Staging" AND services.http.response.headers.server: "nginx"
+
+Expired SSL Certificate on Admin Panel: 
+
+services.tls.certificates.leaf_data.subject.common_name: "admin.target.com"
+
+Leaked Internal Service via TLS SNI: 
+
+services.tls.certificates.leaf_data.subject.common_name: "internal.target.com"
