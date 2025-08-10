@@ -13,3 +13,23 @@ services.tls.certificates.leaf_data.subject.common_name: "admin.target.com"
 Leaked Internal Service via TLS SNI: 
 
 services.tls.certificates.leaf_data.subject.common_name: "internal.target.com"
+
+
+GOOGLE DORKS: 
+
+Finding Login Panels👇
+
+site:*<*.target.com intext:"login" | intitle:"login" | inurl:"login" | intext:"username" | intitle:"username" | inurl:"username" | intext:"password" | intitle:"password" | inurl:"password"
+
+Finding API docs👇
+
+inurl:apidocs | inurl:api-docs | inurl:swagger | inurl:api-explorer site:"target.com"
+
+Finding API Endpoints👇
+
+site:target.com inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3
+
+Third Party Dorking 👇
+
+site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://justpaste.it | site:http://pastebin.com | site:http://jsfiddle.net | site:http://trello.com | site:*.atlassian.net | site:bitbucket.org "target.com"
+
