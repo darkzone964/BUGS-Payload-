@@ -1,1 +1,3 @@
+جرب استخدم ffuf وية المسارات 
 
+ffuf -u https://sub.target.com:PORT_NUMBER/FUZZ/index.js.html -w secLists/Discovery/Web-Contents/raft-large-directories.txt -mc 200,301,302,401 -r -t 3
