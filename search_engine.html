@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الدورك والبحث في Censys</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    direction: rtl;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  pre {
+    background: #eef2f7;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+  }
+  button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>الدورك</h2>
+    <pre id="dorkText">Exposed Staging Environment:
+
+services.http.response.html_title: "Staging" AND services.http.response.headers.server: "nginx"</pre>
+    <button id="searchBtn">ابحث عن الدورك في Censys</button>
+  </div>
+
+<script>
+  document.getElementById('searchBtn').addEventListener('click', function() {
+    const dork = document.getElementById('dorkText').innerText.trim();
+    // تحويل دورك إلى استعلام صالح للبحث في Censys بالترميز المناسب
+    const encodedDork = encodeURIComponent(dork);
+    const searchUrl = `https://search.censys.io/search?q=${encodedDork}`;
+    window.open(searchUrl, '_blank');
+  });
+</script>
+</body>
+</html>
 
